@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Affichage de lieu au clic</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- leaflet CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/style.css">
+	    <script src="js/leaflet.js"></script>
+        <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                </div>
+            <div class="col-md-3 col-sm align-self-center d-flex align-items-center"> </div>
+    </header>        
+        <div class="container">
+            <div class="row row-content align-items-center">
+                <div class="col-sm col-md-4 flex-first">
+                <div class="checkbox">
+                    <label><input type="checkbox" id="tour_eiffel" value=""> Tour Eiffel </label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" id="maison_du_vin" value=""> Maison du vins </label>
+                </div>
+            <div class="col-sm col-md-12 flex-first" id="mapdiv"></div>        	
+        <script>		
+            // Initialisation de la carte 
+            var carte = L.map('mapdiv').setView([48.83, 2.30], 10);
+		    $(function () {			    
+			    L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+				attribution: '&copy; Openstreetmap France | &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    			}).addTo(carte);
+            });
+            // Reinitialistion des checkbox au rechargement de la page
+            $(function(){
+                $('input[type=checkbox]').prop("checked", false);
+            });       
+                var markerVin ;
+                var markerTourEiffel ;
+                // Ajout du marqueur tour eiffel au clic sur la checkbox                          
+                $("#tour_eiffel").change(function() {                
+                if (this.checked) { 
+                    markerTourEiffel = new L.marker([48.858394, 2.294507]);              
+                    markerTourEiffel.addTo(carte);
+                    markerTourEiffel.bindPopup("<p> Tour Eiffel <p>").openPopup();
+                    carte.setView([48.858394, 2.294507], 18);
+                } else {
+                // Suppression du marqueur tour eiffel de la carte lorsque la checkbox est déclickée          
+                    markerTourEiffel.removeFrom(carte); 
+                    carte.setView([48.83, 2.30], 10);
+                    }
+                });
+                // Ajout du marqueur maison du vin au clic sur la checkbox 
+                $("#maison_du_vin").change(function() {
+                if (this.checked){
+                    markerVin = new L.marker([44.843651, -0.574874]);
+                    markerVin.addTo(carte) ;
+                    markerVin.bindPopup("<p> Maison du vin <p>").openPopup();
+                    carte.setView([44.843651, -0.574874], 18);                
+                }
+                // Suppression du marqueur maison du vin de la carte lorsque la checkbox est déclickée 
+                else {                                                          
+                    markerVin.removeFrom(carte);
+                    carte.setView([48.83, 2.30], 10);
+                }
+                });                 
+        </script> 
+                    </div>
+                </div>
+            </div>     
+    <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-5 offset-1 col-sm-2"></div>
+            </div>
+        </div>
+    </footer>                        
+	    <script src="js/bootstrap.min.js"></script>	   
+</body>
+</html>
