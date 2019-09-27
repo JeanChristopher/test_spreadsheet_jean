@@ -12,8 +12,3 @@ Au cours de ce projet, j'ai aimé la tâche qui a consité à zoomer sur les lie
 
 Plusieurs améliorations sont possibles sur ce projet. Aprés cela dépend des différentes spécifications qui lui sonb associées.
 Par exemple il aurait été bien lorsque les deux checkbox sont clickées et qu'ensuite une seule checkbox est décliquée, la carte se recentre sur le markeur de la checkbox restée clickée et n'éffectue pas la reinitialisation de la carte comme c'est le cas dans ce projet.
-
-NOTES POUR LE STAGE
-
-S'il est néccessaire de connaître REACT.JS pour l'accomplissement du projet de stage, je pourrais l'apprendre avant la date de début de stage via ce MOOC : https://www.coursera.org/specializations/full-stack-react 
-Faites moi savoir !
