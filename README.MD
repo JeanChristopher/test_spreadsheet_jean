@@ -10,5 +10,5 @@ APPRÉCIATION SUR LE PROJET
 
 Au cours de ce projet, j'ai aimé la tâche qui a consité à zoomer sur les lieux lorsque ce ceux-ci étaient cochés et à en supprimer les marqueurs lorsque la checkbox était décochée. Aussi, je n'ai relevé aucune difficulté notoire dans la réalisation ce projet. Il était relativement simple ! La partie qui pouvait générer des complications aurait été que pour le faire, j'utilise une librairies que je ne maîtrise pas pour sa réalisation. Si j'avais plus de temps, j'aurais été plus créatif sur la présentation de la page principale en rajoutant un peu de couleurs et d'animations.
 
-Plusieurs améliorations sont possibles sur ce projet. Aprés cela dépend des différentes spécifications qui lui sonb associées.
+Plusieurs améliorations sont possibles sur ce projet. Aprés cela dépend des différentes spécifications qui lui sont associées.
 Par exemple il aurait été bien lorsque les deux checkbox sont clickées et qu'ensuite une seule checkbox est décliquée, la carte se recentre sur le markeur de la checkbox restée clickée et n'éffectue pas la reinitialisation de la carte comme c'est le cas dans ce projet.
